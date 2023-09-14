@@ -1,19 +1,24 @@
-/* eslint-disable react/jsx-key */
 import { useState } from "react";
 import { useEffect } from "react";
+import Cart from "../Cart/Cart";
 
 
 const Home = () => {
     // store the data
     const [allCourses, setAllCourses] = useState([])
+    const [selectedCourses, setSelectedCourses] = useState([])
     // fetching the data
     useEffect(() => {
         fetch('./data.json')
         .then(res => res.json())
         .then(data => setAllCourses(data))
     },[]);
-    console.log(allCourses);
 
+    const handleSelectCourse = (course) =>{
+        setSelectedCourses([...selectedCourses, course])
+    }
+    console.log(selectedCourses);
+    
     return (
         <div className="container mx-auto">
             <h1 className='mt-10 text-4xl font-bold text-center '>Course Registration</h1> 
@@ -32,21 +37,18 @@ const Home = () => {
                     <p>Credit: {course.credit}</p>
                     </div>
                     <div>
-                        <button className="bg-blue-600 w-72 items-center p-2 rounded-xl ml-1 my-2 text-white">Select</button>
+                        <button onClick={()=>handleSelectCourse(course)} className="bg-blue-600 w-72 items-center p-2 rounded-xl ml-1 my-2 text-white">Select</button>
                     </div>
                 </div>
             ))
         }
         </div>
             {/* for cart */}
-            <div className="card w-80 bg-base-100 shadow-2xl rounded-lg p-3 ml-11 max-h-96 mt-12">
-                <h1 className="text-2xl font-semibold text-blue-500">Credit Hour Remaining: </h1>
-                <hr />
-                <p className="text-2xl font-semibold">Course Name</p>
-                <hr />
-                <p className="text-2xl">Total Credit Hour:</p>
-                <hr />
-                <p className="text-2xl">Total Price:</p>
+            <div className="card w-80 bg-base-100 shadow-2xl rounded-lg p-3 ml-11 max-h-96 mt-12 text-2xl">               
+                <Cart 
+                selectedCourses={selectedCourses}>
+                    
+                </Cart>
             </div>
         </div>
         </div>
