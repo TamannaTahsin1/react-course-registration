@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -16,21 +17,37 @@ const Home = () => {
     return (
         <div className="container mx-auto">
             <h1 className='mt-10 text-4xl font-bold text-center '>Course Registration</h1> 
-        <div className="card-container">
+        <div className="lg:flex">
             {/* card design */}
-            <div className="card w-80 bg-base-100 shadow-2xl rounded-lg p-3">
-            <img className="w-80 items-center rounded-xl py-2" src="https://i.ibb.co/Y8kNvKg/Rectangle-2.png" alt="Shoes" />
-            <h2 className="text-xl font-semibold py-2">Introduction to C Programming</h2>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                <div className="flex justify-around py-2">
-                <p>Price: 10000</p>
-                <p>Credit: 1hr</p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 md:ml-6">
+        {/* mapping card */}
+        {
+            allCourses.map(course =>(
+                <div key={course.id} className="card w-80 bg-base-100 shadow-2xl rounded-lg p-3">
+                <img className="w-80 items-center rounded-xl py-2" src={course.cover} alt="Shoes" />
+                <h2 className="text-xl font-semibold py-2">{course.title}</h2>
+                <p>{course.details}</p>
+                    <div className="flex justify-around py-2">
+                    <p>Price: {course.price}</p>
+                    <p>Credit: {course.credit}</p>
+                    </div>
+                    <div>
+                        <button className="bg-blue-600 w-72 items-center p-2 rounded-xl ml-1 my-2 text-white">Select</button>
+                    </div>
                 </div>
-                <div>
-                    <button className="bg-blue-600 w-72 items-center p-2 rounded-xl ml-1 my-2 text-white">Select</button>
-                </div>
-            </div>
+            ))
+        }
+        </div>
             {/* for cart */}
+            <div className="card w-80 bg-base-100 shadow-2xl rounded-lg p-3 ml-11 max-h-96 mt-12">
+                <h1 className="text-2xl font-semibold text-blue-500">Credit Hour Remaining: </h1>
+                <hr />
+                <p className="text-2xl font-semibold">Course Name</p>
+                <hr />
+                <p className="text-2xl">Total Credit Hour:</p>
+                <hr />
+                <p className="text-2xl">Total Price:</p>
+            </div>
         </div>
         </div>
     );
