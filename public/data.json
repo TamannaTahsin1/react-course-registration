@@ -3,7 +3,7 @@
         "id": 1,
         "cover": "https://i.ibb.co/yNNch5k/Rectangle-2-2.png",
         "title": "Introduction to C Programming",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "details": "It is a very popular language, despite being old. The main reason for its popularity is because it is a fundamental language in the field of computer science.",
         "price": 15000,
         "credit": 1
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "cover": "https://i.ibb.co/42RgjQy/Rectangle-2-3.png",
         "title": "Introduction to Algorithms",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "details": "Algorithm is a step-by-step procedure, which defines a set of instructions to be executed in a certain order to get the desired output.",
         "price": 25000,
         "credit": 2
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "cover": "https://i.ibb.co/YBZSww2/Rectangle-2-4.png",
         "title": "Introduction to C++ for DSA",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "details": "This DSA Self-Paced course covers all the topics of DSA in C++. Also, along with C++, we have Java examples and codes as well for Java learners. ",
         "price": 10000,
         "credit": 10
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "cover": "https://i.ibb.co/42WsXSH/Rectangle-3.png",
         "title": "Basic Data Structures",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "details": "A data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.",
         "price": 35000,
         "credit": 5
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "cover": "https://i.ibb.co/Y8kNvKg/Rectangle-2.png",
         "title": "Introduction to OOP Python",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "details": "In Python, object-oriented Programming (OOPs) is a programming paradigm that uses objects and classes in programming. It aims to implement real-world entities.",
         "price": 19000,
         "credit": 5
     },
@@ -43,7 +43,7 @@
         "id": 6,
         "cover": "https://i.ibb.co/Xk17d46/Rectangle-2-5.png",
         "title": "Software Engineering",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "details": "Software engineering is the branch of computer science that deals with the design, development, testing, and maintenance of software applications.",
         "price": 23000,
         "credit": 2
     },
@@ -51,7 +51,7 @@
         "id": 7,
         "cover": "https://i.ibb.co/LhrXDw0/Rectangle-3-1.png",
         "title": "AWS, Cloud Computing",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "details": "Amazon Web Services is the world's most comprehensive and broadly adopted cloud, offering over 200 fully featured services from data centers globally.",
         "price": 35000,
         "credit": 5
 
@@ -60,7 +60,7 @@
         "id": 8,
         "cover": "https://i.ibb.co/Yb8JwyL/Rectangle-2-1.png",
         "title": "Database (MySQL)",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "details": "The database structure is organized into physical files optimized for speed. The logical data model, with objects such as data tables, views, rows, and columns etc.",
         "price": 19000,
         "credit": 5
 
@@ -69,7 +69,7 @@
         "id": 9,
         "cover": "https://i.ibb.co/p2K4S5P/Rectangle-2-6.png",
         "title": "Problem-Solving Part",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "details": "Problem solving is the act of defining a problem; identifying, prioritizing, and selecting alternatives for a solution; and implementing a solution. ",
         "price": 23000,
         "credit": 2
     }
