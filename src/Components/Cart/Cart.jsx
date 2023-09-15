@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 
 // eslint-disable-next-line react/prop-types
@@ -9,8 +10,9 @@ const Cart = ({ selectedCourses }) => {
                 <hr />
                 <p className="font-bold">Course Name</p>
                 {/* mapping */}
-                {selectedCourses.map((course) =>(
-                   <ol>
+               
+                {selectedCourses.map((course) =>(           
+                   <ol  key={course.id}>
                      <li className="text-lg text-gray-500">{course.title}</li>
                    </ol>
                 ))}

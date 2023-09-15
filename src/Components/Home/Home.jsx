@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import Cart from "../Cart/Cart";
+// for toast pakeage
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Home = () => {
     // store the data
-    const [allCourses, setAllCourses] = useState([])
-    const [selectedCourses, setSelectedCourses] = useState([])
+    const [allCourses, setAllCourses] = useState([]);
+    const [selectedCourses, setSelectedCourses] = useState([]);
     // fetching the data
     useEffect(() => {
         fetch('./data.json')
@@ -15,7 +18,13 @@ const Home = () => {
     },[]);
 
     const handleSelectCourse = (course) =>{
-        setSelectedCourses([...selectedCourses, course])
+        const isExist = selectedCourses.find(item => item.id === course.id)
+        if(isExist){
+            toast('This course is already taken. Select other courses')
+        }
+        else{
+            setSelectedCourses([...selectedCourses, course])
+        }
     }
     console.log(selectedCourses);
     
@@ -38,6 +47,19 @@ const Home = () => {
                     </div>
                     <div>
                         <button onClick={()=>handleSelectCourse(course)} className="bg-blue-600 w-72 items-center p-2 rounded-xl ml-1 my-2 text-white">Select</button>
+                        {/* design of toast attribute */}
+                        <ToastContainer
+                            position="top-center"
+                            autoClose={5000}
+                            hideProgressBar={false}
+                            newestOnTop={false}
+                            closeOnClick
+                            rtl={false}
+                            pauseOnFocusLoss
+                            draggable
+                            pauseOnHover
+                            theme="dark"
+                            />
                     </div>
                 </div>
             ))
